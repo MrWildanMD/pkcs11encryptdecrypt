@@ -2,12 +2,12 @@
 #include "pkcs11_wrapper.h"
 #include <stdlib.h>
 
-KeyManager *key_manager_create(CK_SESSION_HANDLE session) {
+KeyManager *key_manager_create(CK_SESSION_HANDLE session, CK_MECHANISM *key_gen_mech, CK_ATTRIBUTE *key_template, size_t key_template_len) {
     KeyManager *key_manager = malloc(sizeof(KeyManager));
     if (!key_manager) return NULL;
 
     key_manager->session = session;
-    key_manager->hKey = pkcs11_generate_aes_key(session);
+    key_manager->hKey = pkcs11_generate_key(session, key_gen_mech, key_template, key_template_len);
     return key_manager;
 }
 

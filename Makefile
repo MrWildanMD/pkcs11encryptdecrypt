@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
-LDFLAGS = -ldl -lpkcs11
-SRC = src/pkcs11_wrapper.c src/key_manager.c src/aes_encryption_service.c
+LDFLAGS = -ldl
+SRC = src/pkcs11_wrapper.c src/key_manager.c src/encrypt_service.c
 OBJ = $(SRC:.c=.o)
 TARGET = pkcs11encryptdecrypt
 
