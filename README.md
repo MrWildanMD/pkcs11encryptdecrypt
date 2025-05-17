@@ -15,6 +15,7 @@ This project implements a modular and extensible cryptographic service using the
 ---
 
 ## 📁 Project Structure
+```bash
 pkcs11encryptdecrypt/
 ├── include/ # Header files (interfaces & data structures)
 │ ├── encryption_service.h
@@ -27,7 +28,7 @@ pkcs11encryptdecrypt/
 ├── main.c # Demo client
 ├── Makefile
 └── README.md
-
+```
 ---
 
 ## 🔧 Prerequisites
@@ -41,7 +42,7 @@ pkcs11encryptdecrypt/
 
 ```bash
 softhsm2-util --init-token --slot 0 --label "MyToken"
-# PIN: 1234
+# PIN: 12345678
 ```
 
 ## ⚙️ Building the Project
