@@ -16,18 +16,21 @@ This project implements a modular and extensible cryptographic service using the
 
 ## 📁 Project Structure
 ```bash
-pkcs11encryptdecrypt/
-├── include/ # Header files (interfaces & data structures)
-│ ├── encryption_service.h
-│ ├── key_manager.h
-│ └── pkcs11_wrapper.h
-├── src/ # Source files
-│ ├── aes_encryption_service.c
-│ ├── key_manager.c
-│ └── pkcs11_wrapper.c
-├── main.c # Demo client
+.
 ├── Makefile
-└── README.md
+├── README.md
+├── include
+│   ├── encrypt_service.h
+│   ├── key_manager.h
+│   └── pkcs11_wrapper.h
+├── main.c
+├── src
+│   ├── encrypt_service.c
+│   ├── key_manager.c
+│   └── pkcs11_wrapper.c
+└── tests
+    ├── Makefile
+    └── test_encrypt_service.c
 ```
 ---
 
